@@ -248,10 +248,10 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 function get20s(array){
   const get20sArray = [];
   for(let i = 0; i < array.length; i++){
-    array[i].years.split(" , ");
-    Number(array[i].years[0]);
-    Number(array[i].years[1]);
-    if(array[i].years[0] >= 1900 && array[i].years[0] <= 2000 && array[i].years[1] >= 1900 && array[i].years[1] <= 2000){
+    let splitYears = [array[i].years.split(" , ")];
+    Number(splitYears[0]);
+    Number(splitYears[1]);
+    if(splitYears[0] >= 1900 && splitYears[1] <= 2000){
       get20sArray.push(array[i].name)
     }
   }
@@ -294,8 +294,6 @@ function addArtist(array, id, name, years, genre, nationality, bio){
     array.push({id: id, name: name, years: years, genre: genre, nationality: nationality, bio: bio})
     return array;
 }
-
-console.log(addArtist(artists, 20, "Sergio Alvarez", "1988 - 2021", "Web Design", "American", "lorem ipsum"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
