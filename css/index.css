@@ -142,6 +142,11 @@ button:hover{
         padding: 3%;
     }
 
+    .title-container div {	
+        height: 30vh;
+        background-size: 200% 200%;
+    }	
+
     .title-container h1{
         font-size: 2.8rem;
         font-weight: bold;
@@ -160,13 +165,21 @@ button:hover{
         width: 100%;
     }
 
+    .artist img{
+        height: 15vh;
+    }
+
     .artist{
+        padding: 2%;
+    }
+
+    .artist .bio{
         font-size: .7rem;
         font-weight: bold;
     }
 
     .artist a{
         font-size: 1.2rem;
+        font-weight: bold;
     }
-
 }
