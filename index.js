@@ -286,7 +286,7 @@ Example: addArtist(artists) should return the artists array with the above objec
 
 function addArtist(array, id, name, years, genre, nationality, bio){
     array.push({id: id, name: name, years: years, genre: genre, nationality: nationality, bio: bio})
-    return array
+    return array;
 }
 
 console.log(addArtist(artists, 20, "Sergio Alvarez", "1988 - 2021", "Web Design", "American", "lorem ipsum"));
@@ -298,12 +298,15 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(array){
+  const lotsOfArtArray = [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i].paintings > 100){
+      lotsOfArtArray.push(array[i].name)
+    }
+  }
+  return lotsOfArtArray;
 }
-
-
-
 
 // 🎨🎨 STRETCH 🎨🎨//
 /* 💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪 
